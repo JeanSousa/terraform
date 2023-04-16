@@ -63,6 +63,6 @@ output "jenkins_ip" { # pego o valor olhando no registry.terraform.io no cloud p
 # local file pego o tipo no registry.terraform.io 
 # na documentação da hashcorp https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file
 resource "local_file" "foo" {
-  content  = digitalocean_kubernetes_cluster.k8s.kube_config.0.raw_config  # pego o atributo kube.confi.0 do registry em kubernetes
+  content  = digitalocean_kubernetes_cluster.k8s.kube_config.0.raw_config # pego o atributo kube.confi.0 do registry em kubernetes
   filename = "kube_config.yaml"
 }
